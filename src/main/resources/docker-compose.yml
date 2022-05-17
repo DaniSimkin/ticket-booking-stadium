@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+  ticketsmongodb:
+    image: mongo:latest
+    container_name: "ticketsmongodb"
+    ports:
+      - 27017:27017
+  springboot-tickets:
+    image: springboot-tickets:1.0
+    container_name: "springboot-tickets"
+    ports:
+      - 8080:8080
+    links:
+      - ticketsmongodb

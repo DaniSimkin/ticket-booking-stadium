@@ -1,0 +1,6 @@
+spring:
+  data:
+    mongodb:
+      database: Tickets
+      host: ticketsmongodb
+      port: 27017
